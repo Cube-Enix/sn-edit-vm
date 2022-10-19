@@ -145,6 +145,25 @@ class HighClass {
                     }
                 },
                 {
+                    opcode: 'containsExactly',
+                        text: formatMessage({
+                            id: 'sn.blocks.containsexactly',
+                            default: '[A] contains exactly [B]?',
+                            description: 'Block that returns if one value contains the other. Case sensitive.'
+                        }),
+                        blockType: BlockType.BOOLEAN,
+                        arguments: {
+                            A: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'abc'
+                            },
+                            B: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'ABC'
+                            }
+                        }
+                },
+                {
                     opcode: 'LTE',
                     text: formatMessage({
                         id: 'sn.blocks.lte',
@@ -704,6 +723,10 @@ class HighClass {
 
     caps (args, utils) {
         return args.text.toUpperCase()
+    }
+
+    containsExactly ({A, B}) {
+        return A.contains(B)
     }
 
     replace (args,utils) {
