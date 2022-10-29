@@ -532,7 +532,7 @@ class HighClass {
                     opcode: 'getdistance',
                     text: formatMessage({
                         id: 'sn.blocks.distance',
-                        default: 'Distance from X: [x1] Y: [y1] to X: [x2] Y: [y2]'
+                        default: 'Distance from [x1] [y1] to [x2] [y2]'
                     }),
                     blockType: BlockType.REPORTER,
                     arguments: {
