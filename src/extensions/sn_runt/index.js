@@ -68,7 +68,7 @@ class runt {
                         default: 'add costume from [URL]',
                         description: 'Adds a costume to the current sprite using the image at the URL. Returns the costume name.'
                     }),
-                    blockType: BlockType.REPORTER,
+                    blockType: BlockType.COMMAND,
                     arguments: {
                         URL: {
                             type: ArgumentType.STRING,
