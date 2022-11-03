@@ -56,7 +56,7 @@ class snrun {
      */
     getInfo() {
         return {
-            id: 'jgRuntime',
+            id: 'snrun',
             name: 'Runtime',
             color1: '#777777',
             color2: '#555555',
