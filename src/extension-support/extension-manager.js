@@ -27,7 +27,7 @@ const builtinExtensions = {
     //Support HighClass and other extensions
     hc: () => require('../extensions/sn_highclass'),
     snap: () => require('../extensions/sn_snap'),
-    runt: () => require('../extensions/sn_snap')
+    runt: () => require('../extensions/sn_runt')
 };
 
 /**
