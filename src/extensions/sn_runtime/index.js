@@ -7,13 +7,13 @@ const ArgumentType = require('../../extension-support/argument-type');
  * Class for Runtime blocks
  * @constructor
  */
-class snrun {
+class runt {
     constructor(runtime) {
         /**
          * The runtime instantiating this block package.
          * @type {Runtime}
          */
-        this.runtime = runtime;
+        this.runtime = runt;
         this.md5HashApi = "https://api.hashify.net/hash/md5/hex?value="; // costumes want MD5 hashes for asset IDs and just in general ig
         this.getImageSizeApi = "https://pm-bapi.vercel.app/api/getSize?url=" // costumes want their image size so they dont break lol
         this.generateMd5Hash = (hashing) => {
@@ -281,4 +281,4 @@ class snrun {
     }
 }
 
-module.exports = snrun;
+module.exports = runt;
