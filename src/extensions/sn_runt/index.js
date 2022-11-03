@@ -65,7 +65,7 @@ class runt {
                     opcode: 'addCostumeUrl',
                     text: formatMessage({
                         id: 'jgRuntime.blocks.addCostumeUrl',
-                        default: 'add costume from [URL]',
+                        default: 'add costume from [URL] named [NAME]',
                         description: 'Adds a costume to the current sprite using the image at the URL. Returns the costume name.'
                     }),
                     blockType: BlockType.COMMAND,
@@ -73,6 +73,10 @@ class runt {
                         URL: {
                             type: ArgumentType.STRING,
                             defaultValue: 'https://en.scratch-wiki.info/w/images/thumb/ScratchCat-Small.png/200px-ScratchCat-Small.png'
+                        },
+                        NAME:  {
+                            type: ArgumentType.STRING,
+                            defaultValue: "spirte 2"
                         }
                     }
                 },
@@ -184,6 +188,7 @@ class runt {
             const Asset = vm.runtime.storage.Asset;
             const AssetType = vm.runtime.storage.AssetType;
             const URL = String(args.URL);
+            const name = String(args.NAME)
             // const COSTUME_SIZE_X = 480; // this will be changed in the future to the ACTUAL image size
             // const COSTUME_SIZE_Y = 360; // this will be changed in the future to the ACTUAL image size
             try {
@@ -191,7 +196,7 @@ class runt {
                     const sprite = util.target.sprite;
                     const COSTUMES_CURRENTLY_IN_THE_SPRITE = sprite.costumes.length;
                     const LAST_SKIN_ID = sprite.costumes[sprite.costumes.length - 1].skinId
-                    const COSTUME_NAME = "runtime_" + String(encodeURIComponent(URL)).replace(/[^A-Za-z0-9]/gmi, "_").substring(0, 600) + String(10000 + (Math.random() * 99999)) + String(((COSTUMES_CURRENTLY_IN_THE_SPRITE + LAST_SKIN_ID) * 3) + 11);
+                    const COSTUME_NAME = '${name}' + String(encodeURIComponent(URL)).replace(/[^A-Za-z0-9]/gmi, "_").substring(0, 600) + String(10000 + (Math.random() * 99999)) + String(((COSTUMES_CURRENTLY_IN_THE_SPRITE + LAST_SKIN_ID) * 3) + 11);
                     // this.generateMd5Hash(COSTUME_NAME).then(GENERATED_MD5 => {
                     const fetchedImageUrl = String(URL).startsWith("data:image/") ? String(URL) : "https://api.allorigins.win/raw?url=" + encodeURIComponent(URL)
                     fetch(fetchedImageUrl).then(req => {
