@@ -26,7 +26,8 @@ const builtinExtensions = {
     gdxfor: () => require('../extensions/scratch3_gdx_for'),
     //Support HighClass and other extensions
     hc: () => require('../extensions/sn_highclass'),
-    snap: () => require('../extensions/sn_snap')
+    snap: () => require('../extensions/sn_snap'),
+    snrun: () => require('../extensions/sn_snap')
 };
 
 /**
