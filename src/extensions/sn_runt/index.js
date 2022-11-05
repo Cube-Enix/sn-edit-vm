@@ -196,7 +196,7 @@ class runt {
                     const sprite = util.target.sprite;
                     const COSTUMES_CURRENTLY_IN_THE_SPRITE = sprite.costumes.length;
                     const LAST_SKIN_ID = sprite.costumes[sprite.costumes.length - 1].skinId
-                    const COSTUME_NAME = '${name}' + String(encodeURIComponent(URL)).replace(/[^A-Za-z0-9]/gmi, "_").substring(0, 600) + String(10000 + (Math.random() * 99999)) + String(((COSTUMES_CURRENTLY_IN_THE_SPRITE + LAST_SKIN_ID) * 3) + 11);
+                    const COSTUME_NAME = ${name} + String(encodeURIComponent(URL)).replace(/[^A-Za-z0-9]/gmi, "_").substring(0, 600) + String(10000 + (Math.random() * 99999)) + String(((COSTUMES_CURRENTLY_IN_THE_SPRITE + LAST_SKIN_ID) * 3) + 11);
                     // this.generateMd5Hash(COSTUME_NAME).then(GENERATED_MD5 => {
                     const fetchedImageUrl = String(URL).startsWith("data:image/") ? String(URL) : "https://api.allorigins.win/raw?url=" + encodeURIComponent(URL)
                     fetch(fetchedImageUrl).then(req => {
