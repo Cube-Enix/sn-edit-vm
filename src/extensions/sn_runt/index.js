@@ -196,7 +196,7 @@ class runt {
                     const sprite = util.target.sprite;
                     const COSTUMES_CURRENTLY_IN_THE_SPRITE = sprite.costumes.length;
                     const LAST_SKIN_ID = sprite.costumes[sprite.costumes.length - 1].skinId;
-                    const COSTUME_NAME = ${name};
+                    const COSTUME_NAME = name;
                     // this.generateMd5Hash(COSTUME_NAME).then(GENERATED_MD5 => {
                     const fetchedImageUrl = String(URL).startsWith("data:image/") ? String(URL) : "https://api.allorigins.win/raw?url=" + encodeURIComponent(URL);
                     fetch(fetchedImageUrl).then(req => {
