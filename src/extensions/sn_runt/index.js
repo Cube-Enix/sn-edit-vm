@@ -305,7 +305,7 @@ class runt {
     TurboModeOn(){
         return vm.setTurboMode(true)
     }
-    turboModeOff(){
+    TurboModeOff(){
         return vm.setTurboMode(false) 
     }
 }
