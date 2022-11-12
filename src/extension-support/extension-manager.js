@@ -28,7 +28,7 @@ const builtinExtensions = {
     hc: () => require('../extensions/sn_highclass'),
     snap: () => require('../extensions/sn_snap'),
     runt: () => require('../extensions/sn_runt'),
-    tn: () => require('../extensions/sn_ten')
+    ten: () => require('../extensions/sn_ten')
 };
 
 /**
