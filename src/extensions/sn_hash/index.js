@@ -45,7 +45,7 @@ class Hash {
         };
     }
     genhash() {
-        return Crypto.randomUUID();
+        return 1;
     }
 }
 
