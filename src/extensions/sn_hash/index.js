@@ -11,7 +11,7 @@ var audio
  * @constructor
  */
 
- class hash {
+ class hashs {
     constructor (runtime) {
         /**
          * The runtime instantiating this block package.
@@ -42,7 +42,6 @@ var audio
                         description: 'Make A hash '
                     }),
                     blockType: BlockType.REPORTER,
-                    arguments: {}
                 }
             ]
         }
