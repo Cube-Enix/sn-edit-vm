@@ -38,9 +38,24 @@ class Ten {
           text: formatMessage({
             id: "sn.blocks.genuuid",
             default: "Create hash",
-            description: "Make A hash ",
+            description: "Make A hash",
           }),
           blockType: BlockType.REPORTER,
+        },
+        {
+          opcode: "md5hash",
+          text: formatMessage({
+            id: "sn.blocks.makemd5hash",
+            default: "MD5 [INP]",
+            description: "MD5",
+          }),
+          blockType: BlockType.REPORTER,
+          arguments:{
+            INP:{
+              type: ArgumentType.STRING,
+              defaultValue: 'testlol'
+            }
+          }
         },
       ],
     };
@@ -62,6 +77,9 @@ class Ten {
         }
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
+  }
+  md5hash(args){
+    return toString(CryptoJS.MD5(args.INP));
   }
 }
 
