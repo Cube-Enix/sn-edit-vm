@@ -15,7 +15,7 @@ class Ten {
      * The runtime instantiating this block package.
      * @type {Runtime}
      */
-    this.runtime = ten;
+    this.runtime = runtime;
     //this.runtime = runtime;
   }
 
@@ -25,10 +25,12 @@ class Ten {
 
   getInfo() {
     return {
-      id: "ten",
+      id: "tn",
       name: "Ten",
       blockIconURI: icon,
       menuIconURI: icon,
+      color1: '#ff964c',
+      color2: '#fd8a5e',
       blocks: [
         {
           opcode: "genhash",
@@ -43,7 +45,7 @@ class Ten {
     };
   }
   genhash() {
-    return 1;
+    return toString(Crypto.randomUUID());
   }
 }
 
