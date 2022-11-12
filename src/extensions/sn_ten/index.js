@@ -25,12 +25,9 @@ class Ten {
   getInfo() {
     return {
       id: "ten",
-      name: "Hash",
+      name: "Ten",
       blockIconURI: icon,
       menuIconURI: icon,
-      docsURI: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      color1: "#77b8e8",
-      color2: "#009bde",
       blocks: [
         {
           opcode: "genhash",
