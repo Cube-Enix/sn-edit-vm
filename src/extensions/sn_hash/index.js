@@ -33,9 +33,9 @@ class hash {
             color2: "#009bde",
             blocks: [
                 {
-                    opcode: "GENHASH",
+                    opcode: "genhash",
                     text: formatMessage({
-                        id: "sn.blocks.playsound",
+                        id: "sn.blocks.genhash",
                         default: "Create hash",
                         description: "Make A hash ",
                     }),
@@ -44,7 +44,7 @@ class hash {
             ],
         };
     }
-    GENHASG () {
+    genhash() {
         return self.c.randomUUID();
     }
 }
