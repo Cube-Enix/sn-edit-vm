@@ -8,7 +8,7 @@ const icon =
  * @constructor
  */
 
-class hash {
+class Hash {
     constructor(runtime) {
         /**
          * The runtime instantiating this block package.
@@ -24,7 +24,7 @@ class hash {
 
     getInfo() {
         return {
-            id: "thash",
+            id: "hash",
             name: "Hash",
             blockIconURI: icon,
             menuIconURI: icon,
@@ -45,8 +45,8 @@ class hash {
         };
     }
     genhash() {
-        return globalThis.Crypto.randomUUID();
+        return Crypto.randomUUID();
     }
 }
 
-module.exports = hash;
+module.exports = Hash;
