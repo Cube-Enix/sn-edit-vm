@@ -178,7 +178,25 @@ class runt {
                     }),
                     disableMonitor: false,
                     blockType: BlockType.REPORTER
-                }
+                },
+                {
+                    opcode: 'TurboModeOn',
+                    text: formatMessage({
+                        id: 'sn.blocks.TurboMode1',
+                        default: 'Turbomode on',
+                        description: 'Sets the max allowed framerate.'
+                    }),
+                    blockType: BlockType.COMMAND,
+                },
+                {
+                    opcode: 'TurboModeOff',
+                    text: formatMessage({
+                        id: 'sn.blocks.TurboMode2',
+                        default: 'Turbomode off',
+                        description: 'Sets the max allowed framerate.'
+                    }),
+                    blockType: BlockType.COMMAND,
+                },
             ]
         };
     }
@@ -283,6 +301,12 @@ class runt {
         let frameRate = Number(args.FRAMERATE) || 1;
         if (frameRate <= 0) frameRate = 1;
         if (vm) vm.runtime.frameLoop.setFramerate(frameRate);
+    }
+    TurboModeOn(){
+        vm.setTurboMode(1)
+    }
+    turboModeoff(){
+        vm.setTurboMode(0) 
     }
 }
 
