@@ -49,10 +49,10 @@ class ten {
             default: "MD5 [INP]",
             description: "MD5",
           }),
-          blockType: BlockType.BUTTON,
+          blockType: BlockType.REPORTER,
           arguments: {
             INP: {
-              "type": .STRING,
+              "type": ArgumentType.STRING,
               "defaultValue": "testlol",
             },
           },
