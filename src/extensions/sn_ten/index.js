@@ -11,13 +11,13 @@ console.log(hash)
  * @constructor
  */
 
-class Ten {
+class ten {
   constructor(runtime) {
     /**
      * The runtime instantiating this block package.
      * @type {Runtime}
      */
-    this.runtime = runtime;
+    this.runtime = ten;
   }
 
   /**
@@ -26,7 +26,7 @@ class Ten {
 
   getInfo() {
     return {
-      id: "tn",
+      id: "snten",
       name: "Tn",
       blockIconURI: icon,
       menuIconURI: icon,
@@ -83,4 +83,4 @@ class Ten {
   }
 }
 
-module.exports = Ten;
+module.exports = ten;
