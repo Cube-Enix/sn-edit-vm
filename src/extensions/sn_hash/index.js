@@ -46,7 +46,7 @@ var audio
                 }
             ]
         }
-    },
+    }
     GENHASG(){
         return crypto.randomUUID()
     }  
