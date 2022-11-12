@@ -26,7 +26,7 @@ var audio
 
     getInfo () {
         return {
-            id: 'hash',
+            id: 'hashs',
             name: 'Hash',
             blockIconURI: icon,
             menuIconURI: icon,
@@ -41,7 +41,7 @@ var audio
                         default: 'Create hash',
                         description: 'Make A hash '
                     }),
-                    blockType: BlockType.REPORTER,
+                    blockType: BlockType.REPORTER
                 }
             ]
         }
