@@ -47,6 +47,7 @@ class Ten {
   uuid() {
     //https://stackoverflow.com/questions/105034/how-do-i-create-a-guid-uuid
     //this help full beacause toString(Crypto.randomUUID()) dont work in all broswer
+    //migh swap to this https://jcward.com/UUID.js
     var d = new Date().getTime();//Timestamp
     var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
