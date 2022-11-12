@@ -15,7 +15,7 @@ class Ten {
      * The runtime instantiating this block package.
      * @type {Runtime}
      */
-    this.runtime = runtime;
+    this.runtime = tn;
     //this.runtime = runtime;
   }
 
@@ -26,7 +26,7 @@ class Ten {
   getInfo() {
     return {
       id: "tn",
-      name: "Ten",
+      name: "Tn",
       blockIconURI: icon,
       menuIconURI: icon,
       color1: '#ff964c',
