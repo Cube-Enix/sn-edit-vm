@@ -64,7 +64,7 @@ class runt {
                 {
                     opcode: 'addCostumeUrl',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.addCostumeUrl',
+                        id: 'sn.blocks.addCostumeUrl',
                         default: 'add costume from [URL] named [NAME]',
                         description: 'Adds a costume to the current sprite using the image at the URL. Returns the costume name.'
                     }),
@@ -83,7 +83,7 @@ class runt {
                 {
                     opcode: 'deleteCostume',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.deleteCostume',
+                        id: 'sn.blocks.deleteCostume',
                         default: 'delete costume at index [COSTUME]',
                         description: 'Deletes a costume at the specified index.'
                     }),
@@ -98,7 +98,7 @@ class runt {
                 {
                     opcode: 'setStageSize',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.setStageSize',
+                        id: 'sn.blocks.setStageSize',
                         default: 'set stage width: [WIDTH] height: [HEIGHT]',
                         description: 'Sets the width and height of the stage.'
                     }),
@@ -117,7 +117,7 @@ class runt {
                 {
                     opcode: 'turboModeEnabled',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.turboModeEnabled',
+                        id: 'sn.blocks.turboModeEnabled',
                         default: 'turbo mode enabled?',
                         description: 'Block that returns whether Turbo Mode is enabled on the project or not.'
                     }),
@@ -127,7 +127,7 @@ class runt {
                 {
                     opcode: 'amountOfClones',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.amountOfClones',
+                        id: 'sn.blocks.amountOfClones',
                         default: 'clone count',
                         description: 'Block that returns the amount of clones that currently exist.'
                     }),
@@ -137,7 +137,7 @@ class runt {
                 {
                     opcode: 'getStageWidth',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.getStageWidth',
+                        id: 'sn.blocks.getStageWidth',
                         default: 'stage width',
                         description: 'Block that returns the width of the stage.'
                     }),
@@ -147,7 +147,7 @@ class runt {
                 {
                     opcode: 'getStageHeight',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.getStageHeight',
+                        id: 'sn.blocks.getStageHeight',
                         default: 'stage height',
                         description: 'Block that returns the height of the stage.'
                     }),
@@ -157,7 +157,7 @@ class runt {
                 {
                     opcode: 'setMaxFrameRate',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.setMaxFrameRate',
+                        id: 'sn.blocks.setMaxFrameRate',
                         default: 'set max framerate to: [FRAMERATE]',
                         description: 'Sets the max allowed framerate.'
                     }),
@@ -172,13 +172,31 @@ class runt {
                 {
                     opcode: 'getMaxFrameRate',
                     text: formatMessage({
-                        id: 'jgRuntime.blocks.getMaxFrameRate',
+                        id: 'sn.blocks.getMaxFrameRate',
                         default: 'max framerate',
                         description: 'Block that returns the amount of FPS allowed.'
                     }),
                     disableMonitor: false,
                     blockType: BlockType.REPORTER
-                }
+                },
+                {
+                    opcode: 'TurboModeOn',
+                    text: formatMessage({
+                        id: 'sn.blocks.TurboMode1',
+                        default: 'Turbomode on',
+                        description: 'Sets the max allowed framerate.'
+                    }),
+                    blockType: BlockType.COMMAND,
+                },
+                {
+                    opcode: 'TurboModeOff',
+                    text: formatMessage({
+                        id: 'sn.blocks.TurboMode2',
+                        default: 'Turbomode off',
+                        description: 'Sets the max allowed framerate.'
+                    }),
+                    blockType: BlockType.COMMAND,
+                },
             ]
         };
     }
@@ -283,6 +301,12 @@ class runt {
         let frameRate = Number(args.FRAMERATE) || 1;
         if (frameRate <= 0) frameRate = 1;
         if (vm) vm.runtime.frameLoop.setFramerate(frameRate);
+    }
+    TurboModeOn(){
+        return vm.setTurboMode(true)
+    }
+    TurboModeOff(){
+        return vm.setTurboMode(false) 
     }
 }
 
