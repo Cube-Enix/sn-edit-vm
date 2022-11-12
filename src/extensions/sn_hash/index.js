@@ -46,10 +46,10 @@ var audio
                 }
             ]
         }
-    }
+    },
     GENHASG(){
         return crypto.randomUUID()
-    },  
+    }  
 }
 
 module.exports = hash;
