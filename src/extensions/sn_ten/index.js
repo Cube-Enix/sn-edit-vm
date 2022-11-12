@@ -15,7 +15,8 @@ class Ten {
      * The runtime instantiating this block package.
      * @type {Runtime}
      */
-    this.runtime = runtime;
+    this.runtime = ten;
+    //this.runtime = runtime;
   }
 
   /**
