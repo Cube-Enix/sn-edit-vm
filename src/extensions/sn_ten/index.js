@@ -16,7 +16,6 @@ class Ten {
      * @type {Runtime}
      */
     this.runtime = tn;
-    //this.runtime = runtime;
   }
 
   /**
