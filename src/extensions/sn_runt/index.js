@@ -303,10 +303,10 @@ class runt {
         if (vm) vm.runtime.frameLoop.setFramerate(frameRate);
     }
     TurboModeOn(){
-        vm.setTurboMode(true)
+        return vm.setTurboMode(true)
     }
     turboModeoff(){
-        vm.setTurboMode(false) 
+        return vm.setTurboMode(false) 
     }
 }
 
