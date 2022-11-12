@@ -51,4 +51,4 @@ var audio
     }  
 }
 
-module.exports = hash;
+module.exports = hashs;
