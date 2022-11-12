@@ -35,7 +35,7 @@ class Ten {
         {
           opcode: "genhash",
           text: formatMessage({
-            id: "sn.blocks.genhash",
+            id: "sn.blocks.genshash",
             default: "Create hash",
             description: "Make A hash ",
           }),
