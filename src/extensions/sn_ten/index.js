@@ -37,18 +37,19 @@ class ten {
           opcode: "uuid",
           text: formatMessage({
             id: "sn.blocks.genuuid",
-            default: "Create hash",
+            default: "UUID",
             description: "Make A hash",
           }),
+          disableMonitor: true,
           blockType: BlockType.REPORTER,
         },
         {
           opcode: "md5hash",
           text: formatMessage({
             id: "sn.blocks.md5hashes",
-            default: "MD5 [INP]",
-            description: "MD5",
+            default: "MD5: [INP]",
           }),
+          disableMonitor: true,
           blockType: BlockType.REPORTER,
           arguments: {
             INP: {
@@ -87,8 +88,9 @@ class ten {
       }
     );
   }
-  md5hash(args) {
-    return CryptoJS.MD5(args.INP);
+  md5hash({inp}) {
+    var md = CryptoJS.MD5(inp);
+    return md
   }
 }
 
