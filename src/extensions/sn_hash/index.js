@@ -18,6 +18,7 @@ var audio
          * @type {Runtime}
          */
         this.runtime = runtime;
+        this.crypto = crypto;
     }
 
     /**
