@@ -11,7 +11,7 @@ var audio
  * @constructor
  */
 
- class hashs {
+ class hash {
     constructor (runtime) {
         /**
          * The runtime instantiating this block package.
@@ -26,7 +26,7 @@ var audio
 
     getInfo () {
         return {
-            id: 'hashs',
+            id: 'thash',
             name: 'Hash',
             blockIconURI: icon,
             menuIconURI: icon,
@@ -51,4 +51,4 @@ var audio
     }  
 }
 
-module.exports = hashs;
+module.exports = hash;
