@@ -128,13 +128,15 @@ class ten {
         return UUID.generate;
     }
     hideAes(args) {
-      var cryptr = new Cryptr(args.KEY);
+      let cryptr = new Cryptr(args.KEY);
 
       var encryptedString = cryptr.encrypt(args.INP);
       return encryptedString
     }
     unhideAes(args) {
-      return encrypt.decrypt(args.INP,args.KEY,args.EBIT)
+      let cryptr = new Cryptr(args.KEY);
+      const decryptedString = cryptr.decrypt(args.INP);
+      return decryptedString
     }
 }
 
