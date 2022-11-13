@@ -33,11 +33,22 @@ class ten {
                     }),
                     blockType: BlockType.COMMAND,
                 },
+                {
+                    opcode: "UUID",
+                    text: formatMessage({
+                        id: "sn.blocks.muuid",
+                        default: "UUID",
+                    }),
+                    blockType: BlockType.REPORTER,
+                },
             ],
         };
     }
     NUKE() {
         vm.clear
+    }
+    UUID(){
+        return eval(self.crypto.randomUUID())
     }
 }
 
