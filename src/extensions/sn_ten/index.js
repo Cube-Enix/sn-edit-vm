@@ -130,13 +130,11 @@ class ten {
     hideAes(args) {
         let cryptr = new Cryptr(args.KEY);
 
-        var encryptedString = cryptr.encrypt(args.INP);
-        return encryptedString;
+        return cryptr.encrypt(args.INP); 
     }
     unhideAes(args) {
         let cryptr = new Cryptr(args.KEY);
-        const decryptedString = cryptr.decrypt(args.INP);
-        return decryptedString;
+        return cryptr.decrypt(args.INP);
     }
 }
 
