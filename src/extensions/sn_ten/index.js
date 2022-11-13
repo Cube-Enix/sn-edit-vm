@@ -34,16 +34,6 @@ class ten {
             color2: "#fd8a5e",
             blocks: [
                 {
-                    opcode: "uuid",
-                    text: formatMessage({
-                        id: "sn.blocks.genuuid",
-                        default: "UUID",
-                        description: "Make A hash",
-                    }),
-                    disableMonitor: true,
-                    blockType: BlockType.REPORTER,
-                },
-                {
                     opcode: "hideAes",
                     text: formatMessage({
                         id: "sn.blocks.hideaes",
@@ -84,49 +74,6 @@ class ten {
             ]
           }
     };
-    }
-    uuid() {
-        //https://stackoverflow.com/questions/105034/how-do-i-create-a-guid-uuid
-        //this help full beacause toString(Crypto.randomUUID()) dont work in all broswer
-        //migh swap to this https://jcward.com/UUID.js
-        var UUID = (function () {
-            var self = {};
-            var lut = [];
-            for (var i = 0; i < 256; i++) {
-                lut[i] = (i < 16 ? "0" : "") + i.toString(16);
-            }
-            self.generate = function () {
-                var d0 = (Math.random() * 0xffffffff) | 0;
-                var d1 = (Math.random() * 0xffffffff) | 0;
-                var d2 = (Math.random() * 0xffffffff) | 0;
-                var d3 = (Math.random() * 0xffffffff) | 0;
-                return (
-                    lut[d0 & 0xff] +
-                    lut[(d0 >> 8) & 0xff] +
-                    lut[(d0 >> 16) & 0xff] +
-                    lut[(d0 >> 24) & 0xff] +
-                    "-" +
-                    lut[d1 & 0xff] +
-                    lut[(d1 >> 8) & 0xff] +
-                    "-" +
-                    lut[((d1 >> 16) & 0x0f) | 0x40] +
-                    lut[(d1 >> 24) & 0xff] +
-                    "-" +
-                    lut[(d2 & 0x3f) | 0x80] +
-                    lut[(d2 >> 8) & 0xff] +
-                    "-" +
-                    lut[(d2 >> 16) & 0xff] +
-                    lut[(d2 >> 24) & 0xff] +
-                    lut[d3 & 0xff] +
-                    lut[(d3 >> 8) & 0xff] +
-                    lut[(d3 >> 16) & 0xff] +
-                    lut[(d3 >> 24) & 0xff]
-                );
-            };
-            return self;
-        })();
-        return UUID.generate;
-    }
     hideAes(args) {
       let cryptr = new Cryptr(args.KEY);
 
@@ -138,6 +85,6 @@ class ten {
       const decryptedString = cryptr.decrypt(args.INP);
       return decryptedString
     }
-}
+};
 
 module.exports = ten;
