@@ -419,23 +419,23 @@ class HighClass {
                     },
                     blockType: BlockType.COMMAND,
                 },
-                {
-                    opcode: "mouseview",
-                    text: formatMessage({
-                        id: "sn.blocks.mouseview",
-                        default: "Mouse [view]",
-                        description: "Hide/Show the mouse",
-                    }),
-                    blockType: BlockType.COMMAND,
-                    arguments: {
-                        viewoption: {
-                            type: ArgumentType.NUMBER,
-                            menu: "mouseviewmenu",
-                            defaultValue: "0",
-                        },
-                    },
-                },
-                //l
+                // {
+                //     opcode: "mouseview",
+                //     text: formatMessage({
+                //         id: "sn.blocks.mouseview",
+                //         default: "Mouse [view]",
+                //         description: "Hide/Show the mouse",
+                //     }),
+                //     blockType: BlockType.COMMAND,
+                //     arguments: {
+                //         viewoption: {
+                //             type: ArgumentType.NUMBER,
+                //             menu: "mouseviewmenu",
+                //             defaultValue: "0",
+                //         },
+                //     },
+                // },
+                // //l
                 {
                     opcode: "comment",
                     text: formatMessage({
