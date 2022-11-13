@@ -35,13 +35,20 @@ const base = {
 };
 
 module.exports = [
-    // Web-compatible
+    // Web-compatible, 
     defaultsDeep({}, base, {
         target: 'web',
         entry: {
             'scratch-vm': './src/index.js',
             'scratch-vm.min': './src/index.js'
         },
+        // hope this works 
+        resolve: {
+            fallback: {
+                "crypto": require.resolve("crypto-browserify")
+            }
+        },
+        //h 
         output: {
             libraryTarget: 'umd',
             path: path.resolve('dist', 'web')
@@ -74,7 +81,8 @@ module.exports = [
             'minilog': true,
             'scratch-parser': true,
             'socket.io-client': true,
-            'text-encoding': true
+            'text-encoding': true,
+            //npm i crypto-browserify'cryptr': true
         }
     }),
     // Playground
