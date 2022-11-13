@@ -26,9 +26,13 @@ const builtinExtensions = {
     gdxfor: () => require('../extensions/scratch3_gdx_for'),
     //Support HighClass and other extensions
     hc: () => require('../extensions/sn_highclass'),
+    //aduio
     snap: () => require('../extensions/sn_snap'),
+    //runtime things
     runt: () => require('../extensions/sn_runt'),
-    ten: () => require('../extensions/sn_ten')
+    // ten is extenions
+    ten: () => require('../extensions/sn_ten') 
+
 };
 
 /**
