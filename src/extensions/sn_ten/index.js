@@ -45,7 +45,7 @@ class ten {
         };
     }
     NUKE() {
-        vm.clear
+        return vm.clear()
     }
     GENUUID(){
         var e = "self.crypto.randomUUID()"
