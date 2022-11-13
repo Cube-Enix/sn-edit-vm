@@ -42,13 +42,6 @@ module.exports = [
             'scratch-vm': './src/index.js',
             'scratch-vm.min': './src/index.js'
         },
-        // hope this works 
-        resolve: {
-            fallback: {
-                "crypto": require.resolve("crypto-browserify")
-            }
-        },
-        //h 
         output: {
             libraryTarget: 'umd',
             path: path.resolve('dist', 'web')
