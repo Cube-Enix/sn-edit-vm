@@ -28,16 +28,15 @@ class ten {
                 {
                     opcode: "NUKE",
                     text: formatMessage({
-                        id: "sn.blocks.hideaes",
+                        id: "sn.blocks.nukes",
                         default: "Nuke the project",
                     }),
-                    disableMonitor: true,
                     blockType: BlockType.COMMAND,
                 },
             ],
         };
     }
-    NUKE(args) {
+    NUKE() {
         vm.clear
     }
 }
