@@ -34,7 +34,7 @@ class ten {
                     blockType: BlockType.COMMAND,
                 },
                 {
-                    opcode: "UUID",
+                    opcode: "GENUUID",
                     text: formatMessage({
                         id: "sn.blocks.muuid",
                         default: "UUID",
@@ -47,8 +47,23 @@ class ten {
     NUKE() {
         vm.clear
     }
-    UUID(){
-        return eval(self.crypto.randomUUID())
+    GENUUID(){
+        var e = "self.crypto.randomUUID()"
+        var evaluate = 0;
+        var output = undefined;
+        JS = JS.replace("console.log", "function_log");
+        try {
+            evaluate = eval(e);
+            if (output != undefined) {
+                return output;
+            }
+            if (evaluate != undefined) {
+                return evaluate;
+            }
+            return "undefined";
+        } catch (err) {
+            return err;
+        }
     }
 }
 
