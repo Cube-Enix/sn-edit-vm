@@ -26,28 +26,32 @@ class ten {
             color2: "#fd8a5e",
             blocks: [
                 {
-                    opcode: "NUKE",
+                    opcode: "nuke",
                     text: formatMessage({
                         id: "sn.blocks.nukes",
                         default: "Nuke the project",
+                        description: "Returns user input",
+
                     }),
                     blockType: BlockType.COMMAND,
                 },
                 {
-                    opcode: "GENUUID",
+                    opcode: "genuuid",
                     text: formatMessage({
                         id: "sn.blocks.muuid",
-                        default: "UUID",
+                        default: "Gen uuid",
+                        description: "Returns user input",
+                        
                     }),
                     blockType: BlockType.REPORTER,
                 },
             ],
         };
     }
-    NUKE() {
+    nuke() {
         return vm.clear()
     }
-    GENUUID(){
+    genuuid(){
         var e = "self.crypto.randomUUID()"
         var evaluate = 0;
         var output = undefined;
