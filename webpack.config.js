@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const defaultsDeep = require('lodash.defaultsdeep');
 const path = require('path');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');//this to load node mouduels
 
 const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -31,7 +32,11 @@ const base = {
             }
         }]
     },
-    plugins: []
+    plugins: [
+        new NodePolyfillPlugin({
+			includeAliases: ['crypto']
+		})
+    ]
 };
 
 module.exports = [
