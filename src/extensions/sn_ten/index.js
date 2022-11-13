@@ -46,8 +46,8 @@ class ten {
                 {
                     opcode: "hideAes",
                     text: formatMessage({
-                        id: "sn.blocks.hide",
-                        default: "aes: data input [INP] Key [KEY]",
+                        id: "sn.blocks.hideC",
+                        default: "aes: data input:[INP] Key: [KEY] Bit:[EBIT]",
                     }),
                     disableMonitor: true,
                     blockType: BlockType.REPORTER,
@@ -60,65 +60,97 @@ class ten {
                             type: ArgumentType.STRING,
                             defaultValue: "testlol",
                         },
-                        viewoption: {
+                        EBIT: {
                             type: ArgumentType.NUMBER,
-                            menu: "mouseviewmenu",
+                            menu: "hideaesmeune",
                             defaultValue: "0",
                         },
                     },
                 },
+                {
+                  opcode: "unhideAes",
+                  text: formatMessage({
+                      id: "sn.blocks.hideC",
+                      default: "dAes:input:[INP] Key: [KEY] Bit:[EBIT]",
+                  }),
+                  disableMonitor: true,
+                  blockType: BlockType.REPORTER,
+                  arguments: {
+                      INP: {
+                          type: ArgumentType.STRING,
+                          defaultValue: "testlol",
+                      },
+                      KEY: {
+                          type: ArgumentType.STRING,
+                          defaultValue: "testlol",
+                      },
+                      EBIT: {
+                          type: ArgumentType.NUMBER,
+                          menu: "unhideaesmeune",
+                          defaultValue: "0",
+                      },
+                  },
+              },
             ],
             menus: {
-              mouseButton: {
+              hideaesmeune: {
                   items: [
                       {
                           text: formatMessage({
-                              id: 'sn.blocks.mouseButton.primary',
-                              default: '(0) primary',
+                              id: 'sn.blocks.hideAES.128',
+                              default: '128',
                               description: 'Dropdown item to select primary (usually left) mouse button'
                           }),
-                          value: '0'
+                          value: '128'
                       },
                       {
                           text: formatMessage({
-                              id: 'sn.blocks.mouseButton.middle',
-                              default: '(1) middle',
+                              id: 'sn.blocks.hideAES256.192',
+                              default: '192',
                               description: 'Dropdown item to select middle mouse button'
                           }),
-                          value: '1'
+                          value: '192'
                       },
                       {
                           text: formatMessage({
-                              id: 'sn.blocks.mouseButton.secondary',
-                              default: '(2) secondary',
+                              id: 'sn.blocks.hideAES256.256',
+                              default: '256',
                               description: 'Dropdown item to select secondary (usually right) mouse button'
                           }),
-                          value: '2'
+                          value: '256'
                       }
                   ],
                   acceptReporters: true
               },
-              mouseviewmenu: {
-                  items: [
-                      {
-                          text: formatMessage({
-                              id: 'sn.blocks.mouseview.show',
-                              default: 'Show',
-                              description: 'Show the mouse onscreen'
-                          }),
-                          value: '0'
-                      },
-                      {
-                          text: formatMessage({
-                              id: 'sn.blocks.mouseview.hide',
-                              default: 'Hide',
-                              description: 'Hide the mouse onscreen'
-                          }),
-                          value: '1'
-                      },
-                  ],
-                  acceptReporters: true
-              }
+              unhideaesmeune: {
+                items: [
+                    {
+                        text: formatMessage({
+                            id: 'sn.blocks.hideAES.128',
+                            default: '128',
+                            description: 'Dropdown item to select primary (usually left) mouse button'
+                        }),
+                        value: '128'
+                    },
+                    {
+                        text: formatMessage({
+                            id: 'sn.blocks.hideAES256.192',
+                            default: '192',
+                            description: 'Dropdown item to select middle mouse button'
+                        }),
+                        value: '192'
+                    },
+                    {
+                        text: formatMessage({
+                            id: 'sn.blocks.hideAES256.256',
+                            default: '256',
+                            description: 'Dropdown item to select secondary (usually right) mouse button'
+                        }),
+                        value: '256'
+                    }
+                ],
+                acceptReporters: true
+            },
           }
         };
     }
@@ -163,6 +195,12 @@ class ten {
             return self;
         })();
         return UUID.generate;
+    }
+    hideAes(args){
+      return encrypt(args.INP,args.KEY,args.EBIT) 
+    }
+    unhideAes(args){
+      return decrypt(args.INP,args.KEY,args.EBIT)
     }
 }
 
