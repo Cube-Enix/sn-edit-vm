@@ -36,24 +36,11 @@ class ten {
                     }),
                     blockType: BlockType.COMMAND,
                 },
-                {
-                    opcode: "genuuid",
-                    text: formatMessage({
-                        id: "sn.blocks.muuid",
-                        default: "Gen uuid",
-                        description: "Returns user input",
-                        
-                    }),
-                    blockType: BlockType.REPORTER,
-                },
             ],
         };
     }
     nuke(util) {
         return vm.clear()
-    }
-    genuuid(util){
-        return "crypto.randomUUID()"
     }
 }
 
