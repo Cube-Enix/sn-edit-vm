@@ -32,7 +32,7 @@ const builtinExtensions = {
     runt: () => require('../extensions/sn_runt'),
     // ten is extenions
     ten: () => require('../extensions/sn_ten') ,
-    DevTools: () => require('../extension/sn_devtools')
+    DevTools: () => require('../extension/sn_devtool')
 };
 
 /**

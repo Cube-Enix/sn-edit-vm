@@ -49,10 +49,10 @@ class ten {
             ],
         };
     }
-    nuke() {
+    nuke(util) {
         return vm.clear()
     }
-    genuuid(){
+    genuuid(util){
         return "crypto.randomUUID()"
     }
 }
