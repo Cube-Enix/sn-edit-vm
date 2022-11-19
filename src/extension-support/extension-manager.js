@@ -31,8 +31,8 @@ const builtinExtensions = {
     //runtime things
     runt: () => require('../extensions/sn_runt'),
     // ten is extenions
-    ten: () => require('../extensions/sn_ten') 
-
+    ten: () => require('../extensions/sn_ten') ,
+    DevTools: () => require('../extension/sn_devtools')
 };
 
 /**
