@@ -40,7 +40,7 @@ class ten {
         };
     }
     nuke(util) {
-        vm.clear()
+        clear()
     }
 }
 
