@@ -39,6 +39,7 @@
     "format-message": "6.2.1",
     "htmlparser2": "3.10.0",
     "immutable": "3.8.2",
+    "js-base64": "^3.7.3",
     "jszip": "^3.1.5",
     "minilog": "3.1.0",
     "scratch-parser": "git+https://github.com/TurboWarp/scratch-parser.git#64dfc0cce7821c5482a5d422d4ea25c74408904e",
