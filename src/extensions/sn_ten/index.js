@@ -40,9 +40,7 @@ class ten {
         };
     }
     nuke(util) {
-        runtime.dispose();
-        editingTarget = null;
-        emitTargetsUpdate(false /* Don't emit project change */);
+        while(0)
     }
 }
 
