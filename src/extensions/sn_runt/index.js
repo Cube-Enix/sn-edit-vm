@@ -106,7 +106,7 @@ class runt {
                     arguments: {
                         WIDTH: {
                             type: ArgumentType.NUMBER,
-                            defaultValue: 480
+                            defaultValue: 640
                         },
                         HEIGHT: {
                             type: ArgumentType.NUMBER,
@@ -306,7 +306,7 @@ class runt {
         return vm.setTurboMode(true)
     }
     TurboModeOff(){
-        return vm.setTurboMode(false) 
+        return vm.setTurboMode(false)
     }
 }
 
