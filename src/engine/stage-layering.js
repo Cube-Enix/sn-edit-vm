@@ -15,13 +15,18 @@ class StageLayering {
         return 'sprite';
     }
 
+    static get PEN_PLUS_LAYER () {
+        return 'pen';
+    }
+
     // Order of layer groups relative to each other,
     static get LAYER_GROUPS () {
         return [
             StageLayering.BACKGROUND_LAYER,
             StageLayering.VIDEO_LAYER,
             StageLayering.PEN_LAYER,
-            StageLayering.SPRITE_LAYER
+            StageLayering.SPRITE_LAYER,
+            StageLayering.PEN_PLUS_LAYER
         ];
     }
 }
