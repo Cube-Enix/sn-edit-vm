@@ -218,7 +218,7 @@ class Scratch3PenBlocks {
         return [
             {
                 text: formatMessage({
-                    id: 'pen.colorMenu.color',
+                    id: 'penpluspluscolorMenu.color',
                     default: 'color',
                     description: 'label for color element in color picker for pen extension'
                 }),
@@ -226,7 +226,7 @@ class Scratch3PenBlocks {
             },
             {
                 text: formatMessage({
-                    id: 'pen.colorMenu.saturation',
+                    id: 'penpluspluscolorMenu.saturation',
                     default: 'saturation',
                     description: 'label for saturation element in color picker for pen extension'
                 }),
@@ -234,7 +234,7 @@ class Scratch3PenBlocks {
             },
             {
                 text: formatMessage({
-                    id: 'pen.colorMenu.brightness',
+                    id: 'penpluspluscolorMenu.brightness',
                     default: 'brightness',
                     description: 'label for brightness element in color picker for pen extension'
                 }),
@@ -242,7 +242,7 @@ class Scratch3PenBlocks {
             },
             {
                 text: formatMessage({
-                    id: 'pen.colorMenu.transparency',
+                    id: 'penpluspluscolorMenu.transparency',
                     default: 'transparency',
                     description: 'label for transparency element in color picker for pen extension'
                 }),
@@ -293,7 +293,7 @@ class Scratch3PenBlocks {
         return {
             id: 'penplusplus',
             name: formatMessage({
-                id: 'pen.categoryName',
+                id: 'penpluspluscategoryName',
                 default: 'Pen++',
                 description: 'Label for the pen++ extension category'
             }),
@@ -303,7 +303,7 @@ class Scratch3PenBlocks {
                     opcode: 'clear',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.clear',
+                        id: 'penplusplusclear',
                         default: 'erase all',
                         description: 'erase all pen trails and stamps'
                     })
@@ -312,7 +312,7 @@ class Scratch3PenBlocks {
                     opcode: 'stamp',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.stamp',
+                        id: 'penplusplusstamp',
                         default: 'stamp',
                         description: 'render current costume on the background'
                     }),
@@ -322,7 +322,7 @@ class Scratch3PenBlocks {
                     opcode: 'penDown',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.penDown',
+                        id: 'penpluspluspenDown',
                         default: 'pen down',
                         description: 'start leaving a trail when the sprite moves'
                     }),
@@ -332,7 +332,7 @@ class Scratch3PenBlocks {
                     opcode: 'penUp',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.penUp',
+                        id: 'penpluspluspenUp',
                         default: 'pen up',
                         description: 'stop leaving a trail behind the sprite'
                     }),
@@ -342,7 +342,7 @@ class Scratch3PenBlocks {
                     opcode: 'setPenColorToColor',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.setColor',
+                        id: 'penplusplussetColor',
                         default: 'set pen color to [COLOR]',
                         description: 'set the pen color to a particular (RGB) value'
                     }),
@@ -357,7 +357,7 @@ class Scratch3PenBlocks {
                     opcode: 'changePenColorParamBy',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.changeColorParam',
+                        id: 'penpluspluschangeColorParam',
                         default: 'change pen [COLOR_PARAM] by [VALUE]',
                         description: 'change the state of a pen color parameter'
                     }),
@@ -378,7 +378,7 @@ class Scratch3PenBlocks {
                     opcode: 'setPenColorParamTo',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.setColorParam',
+                        id: 'penplusplussetColorParam',
                         default: 'set pen [COLOR_PARAM] to [VALUE]',
                         description: 'set the state for a pen color parameter e.g. saturation'
                     }),
@@ -399,7 +399,7 @@ class Scratch3PenBlocks {
                     opcode: 'changePenSizeBy',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.changeSize',
+                        id: 'penpluspluschangeSize',
                         default: 'change pen size by [SIZE]',
                         description: 'change the diameter of the trail left by a sprite'
                     }),
@@ -415,7 +415,7 @@ class Scratch3PenBlocks {
                     opcode: 'setPenSizeTo',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.setSize',
+                        id: 'penplusplussetSize',
                         default: 'set pen size to [SIZE]',
                         description: 'set the diameter of a trail left by a sprite'
                     }),
@@ -432,7 +432,7 @@ class Scratch3PenBlocks {
                     opcode: 'setPenShadeToNumber',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.setShade',
+                        id: 'penplusplussetShade',
                         default: 'set pen shade to [SHADE]',
                         description: 'legacy pen blocks - set pen shade'
                     }),
@@ -448,7 +448,7 @@ class Scratch3PenBlocks {
                     opcode: 'changePenShadeBy',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.changeShade',
+                        id: 'penpluspluschangeShade',
                         default: 'change pen shade by [SHADE]',
                         description: 'legacy pen blocks - change pen shade'
                     }),
@@ -464,7 +464,7 @@ class Scratch3PenBlocks {
                     opcode: 'setPenHueToNumber',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.setHue',
+                        id: 'penplusplussetHue',
                         default: 'set pen color to [HUE]',
                         description: 'legacy pen blocks - set pen color to number'
                     }),
@@ -480,7 +480,7 @@ class Scratch3PenBlocks {
                     opcode: 'changePenHueBy',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
-                        id: 'pen.changeHue',
+                        id: 'penpluspluschangeHue',
                         default: 'change pen color by [HUE]',
                         description: 'legacy pen blocks - change pen color'
                     }),
