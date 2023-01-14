@@ -2,6 +2,7 @@ const formatMessage = require('format-message');
 const BlockType = require('../../extension-support/block-type');
 const ArgumentType = require('../../extension-support/argument-type');
 // const Cast = require('../../util/cast');
+const rt = require('../../engine/runtime');
 
 /**
  * Class for Runtime blocks
@@ -286,17 +287,23 @@ class runt {
         return vm.runtime.turboMode;
     }
     amountOfClones() {
-        return vm.runtime._cloneCounter;
+        return rt.MAX_CLONES.toString();
+        //return String(vm.runtime._cloneCounter);
     }
     getStageWidth() {
-        return vm.runtime.stageWidth;
+        return rt.STAGE_WIDTH.toString();
+        //return String(vm.runtime.stageWidth);
     }
     getStageHeight() {
-        return vm.runtime.stageHeight;
+       return rt.STAGE_WIDTH.toString();
+       //return String(vm.runtime.stageHeight);
     }
     getMaxFrameRate() {
-        return vm.runtime.frameLoop.framerate;
+        return rt.MAX_FRAMERATE.toString();
+        //return String(vm.runtime.frameLoop.framerate);
     }
+    //q: Which Github user wrote this block?
+    //a: @TheColaber
     setMaxFrameRate(args, util) {
         let frameRate = Number(args.FRAMERATE) || 1;
         if (frameRate <= 0) frameRate = 1;
