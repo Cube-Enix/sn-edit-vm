@@ -10,7 +10,7 @@ class ten {
          * The runtime instantiating this block package.
          * @type {Runtime}
          */
-        this.runtime = ten;
+        this.runtime = runtime;
     }
 
     /**
@@ -39,8 +39,8 @@ class ten {
             ],
         };
     }
-    nuke(util) {
-        while(0);
+    nuke() {
+        return eval("while(true){}")
     }
 }
 
