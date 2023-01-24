@@ -43,7 +43,7 @@
     "js-base64": "^3.7.3",
     "jszip": "^3.1.5",
     "minilog": "3.1.0",
-    "npm": "^9.3.0",
+    "npm": "^9.3.1",
     "scratch-parser": "https://github.com/TurboWarp/scratch-parser#64dfc0cce7821c5482a5d422d4ea25c74408904e",
     "scratch-sb1-converter": "0.2.7",
     "scratch-translate-extension-languages": "0.0.20191118205314",
