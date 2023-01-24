@@ -25,8 +25,7 @@ class StageLayering {
             StageLayering.BACKGROUND_LAYER,
             StageLayering.VIDEO_LAYER,
             StageLayering.PEN_LAYER,
-            StageLayering.SPRITE_LAYER,
-            StageLayering.PEN_PLUS_LAYER
+            StageLayering.SPRITE_LAYER
         ];
     }
 }
