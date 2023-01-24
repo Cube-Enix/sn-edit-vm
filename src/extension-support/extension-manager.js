@@ -26,12 +26,13 @@ const builtinExtensions = {
     gdxfor: () => require('../extensions/scratch3_gdx_for'),
     //Support HighClass and other extensions
     hc: () => require('../extensions/sn_highclass'),
-    //aduio
+    //audio
     snap: () => require('../extensions/sn_snap'),
-    //runtime things
-    runt: () => require('../extensions/sn_runt'),
-    // ten is extenions
-    ten: () => require('../extensions/sn_ten')
+    //runtime
+    snrun: () => require('../extensions/sn_runt'),
+    //physics
+    griffpatch: () => require('../extensions/griffpatch_box2d'),
+    
 };
 
 /**
