@@ -82,8 +82,8 @@ module.exports = [
     defaultsDeep({}, base, {
         target: 'web',
         entry: {
-            'benchmark': './src/playground/benchmark',
-            'video-sensing-extension-debug': './src/extensions/scratch3_video_sensing/debug',
+//             'benchmark': './src/playground/benchmark',
+//             'video-sensing-extension-debug': './src/extensions/scratch3_video_sensing/debug',
             'vm.min': './src/playground/vm'
         },
         output: {
