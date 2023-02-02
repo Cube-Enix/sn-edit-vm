@@ -37,7 +37,7 @@ jobs:
           command: git config --global user.name ShipmasterKyle
       - add_ssh_keys:
           fingerprints:
-            - ""
+            - "9b:38:b6:14:a2:ad:a8:0f:b3:bd:47:c3:7f:c2:e5:70"
       - deploy:
           name: deploy
           command: npm run deploy
