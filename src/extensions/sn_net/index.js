@@ -4,7 +4,9 @@ const ArgumentType = require('../../extension-support/argument-type');
 // const Cast = require('../../util/cast');
 const DOMPurify  = require('dompurify');
 
-class HighClass {
+const icon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZWxsaXBzZSBjeD0iMy43MiIgY3k9IjQuMDIiIHJ4PSIuNjciIHJ5PSIuNjIiLz48cGF0aCBkPSJNNi4yOSA0LjY1QS42NS42NSAwIDAgMCA3IDRhLjY3LjY3IDAgMCAwLTEuMzggMCAuNjUuNjUgMCAwIDAgLjY3LjY1eiIvPjxlbGxpcHNlIGN4PSI4Ljg3IiBjeT0iNC4wMiIgcng9Ii42NyIgcnk9Ii42MyIvPjxwYXRoIGQ9Ik0xNC4yNSAxLjVIMS43NUExLjI1IDEuMjUgMCAwIDAgLjUgMi43NXYxMC41YTEuMjUgMS4yNSAwIDAgMCAxLjI1IDEuMjVoMTIuNWExLjI1IDEuMjUgMCAwIDAgMS4yNS0xLjI1VjIuNzVhMS4yNSAxLjI1IDAgMCAwLTEuMjUtMS4yNXpNMS43NSAyLjc1aDEyLjV2Mi41SDEuNzV2LTIuNXptMCAxMC41VjYuNWgxMi41djYuNzV6Ii8+PC9zdmc+"
+
+class Net {
     constructor(runtime) {
         /**
          * The runtime instantiating this block package.
@@ -146,6 +148,55 @@ class HighClass {
     getUrl () {
         return window.location.href;
     }
+
+  checkIfQueryStringFieldExists (args) {
+        const field = args.FIELD
+        let parameters = (new URL(window.location)).searchParams
+        return parameters.has(field)
+    }
+
+    getQueryStringFieldValue (args) {
+        const field = args.FIELD
+        let parameters = (new URL(window.location)).searchParams
+        const value = parameters.get(field)
+        // Be sure to always return a valid string/ If the field can't be found,
+        // we return an empty string.
+        return value !== null ? value : ''
+    }
+
+    openUrl (args) {
+        window.open(args.URL, '_blank')
+    }
+
+      getLocalStorageKey (name) {
+        let id
+        if (window.adacraft && window.adacraft.projectId) {
+            id = window.adacraft.projectId
+        } else {
+            id = 'default'
+        }
+        return `adacraft:project:${id}:${name}`
+    }
+
+    localStorageSetItem (args) {
+        localStorage.setItem(
+            this.getLocalStorageKey(args.NAME),
+            args.VALUE
+        )
+    }
+
+    localStorageGetItem (args) {
+        const value = localStorage.getItem(this.getLocalStorageKey(args.NAME))
+        return value || ''
+    }
+    
+    localStorageRemoveItem (args) {
+        localStorage.removeItem(this.getLocalStorageKey(args.NAME))
+    }
+    
+    localStorageItemExists (args) {
+        return localStorage.getItem(this.getLocalStorageKey(args.NAME)) !== null
+    }
 }
 
-module.exports = HighClass;
+module.exports = Net;
