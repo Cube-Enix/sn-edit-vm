@@ -30,8 +30,6 @@ const builtinExtensions = {
     snap: () => require('../extensions/sn_snap'),
     //runtime
     snrun: () => require('../extensions/sn_runt'),
-    //physics
-    griffpatch: () => require('../extensions/griffpatch_box2d'),
     
 };
 
