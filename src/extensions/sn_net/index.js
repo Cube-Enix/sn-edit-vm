@@ -168,16 +168,6 @@ class Net {
         window.open(args.URL, '_blank')
     }
 
-      getLocalStorageKey (name) {
-        let id
-        if (window.adacraft && window.adacraft.projectId) {
-            id = window.adacraft.projectId
-        } else {
-            id = 'default'
-        }
-        return `adacraft:project:${id}:${name}`
-    }
-
     localStorageSetItem (args) {
         localStorage.setItem(
             this.getLocalStorageKey(args.NAME),
