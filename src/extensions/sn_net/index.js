@@ -143,13 +143,13 @@ class Net {
             ],
             menus: {},
         },
-    };
+    }
 
     getUrl () {
         return window.location.href;
     }
 
-  checkIfQueryStringFieldExists (args) {
+  	checkIfQueryStringFieldExists (args) {
         const field = args.FIELD
         let parameters = (new URL(window.location)).searchParams
         return parameters.has(field)
@@ -162,7 +162,7 @@ class Net {
         // Be sure to always return a valid string/ If the field can't be found,
         // we return an empty string.
         return value !== null ? value : ''
-    }
+    	}
 
     openUrl (args) {
         window.open(args.URL, '_blank')
