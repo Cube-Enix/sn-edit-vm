@@ -34,7 +34,7 @@ class Net {
                         id: "sn.net.getUrl",
                         default: "current URL",
                         description:
-                            "Block that returns the current url,
+                            "Block that returns the current url"
                     }),
                     blockType: BlockType.REPORTER,
                 },
