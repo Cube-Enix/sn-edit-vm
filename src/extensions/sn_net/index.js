@@ -20,8 +20,8 @@ class Net {
      */
     getInfo() {
         return {
-            id: "hc",
-            name: "HighClass",
+            id: "net",
+            name: "SN-Net",
             blockIconURI: icon,
             menuIconURI: icon,
             docsURI: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
