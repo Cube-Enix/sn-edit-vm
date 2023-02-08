@@ -30,6 +30,8 @@ const builtinExtensions = {
     snap: () => require('../extensions/sn_snap'),
     //runtime
     snrun: () => require('../extensions/sn_runt'),
+    //net
+    snnet: () => require('../extensions/sn_net'),
     
 };
 
