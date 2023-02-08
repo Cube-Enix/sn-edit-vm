@@ -20,7 +20,7 @@ class Net {
      */
     getInfo() {
         return {
-            id: "net",
+            id: "snnet",
             name: "SN-Net",
             blockIconURI: icon,
             menuIconURI: icon,
