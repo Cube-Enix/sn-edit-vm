@@ -33,18 +33,17 @@ class Net {
                     text: formatMessage({
                         id: "sn.net.getUrl",
                         default: "current URL",
-                        description:
-                            "Block that returns the current url"
+                        description: "Block that returns the current url"
                     }),
                     blockType: BlockType.REPORTER,
-                },
+              },
               {
                     opcode: 'checkIfQueryStringFieldExists',
-                    blockType: BlockType.BOOLEAN,
                     text: formatMessage({
                         id: "sn.net.queryField",
                         defualt: "field [FIELD] exists in current URL"
                     }),
+                    blockType: BlockType.BOOLEAN,
                     arguments: {
                         FIELD: {
                             type: ArgumentType.STRING,
@@ -142,7 +141,7 @@ class Net {
                 },
             ],
             menus: {},
-        },
+        };
     }
 
     getUrl () {
