@@ -84,7 +84,8 @@ module.exports = [
         entry: {
 //             'benchmark': './src/playground/benchmark',
 //             'video-sensing-extension-debug': './src/extensions/scratch3_video_sensing/debug',
-            'vm.min': './src/playground/vm'
+            'vm.min': './src/playground/vm',
+            'extension-worker': './src/extension-support/extension-worker'
         },
         output: {
             path: path.resolve(__dirname, 'playground'),
