@@ -43,7 +43,7 @@ class Net {
                         id: "sn.net.queryField",
                         defualt: "field [FIELD] exists in current URL"
                     }),
-                    blockType: BlockType.BOOLEAN,
+                    blockType: BlockType.REPORTER,
                     arguments: {
                         FIELD: {
                             type: ArgumentType.STRING,
@@ -53,11 +53,11 @@ class Net {
                 },
               {
                     opcode: 'getQueryStringFieldValue',
-                    blockType: BlockType.REPORTER,
                     text: formatMessage({
                       id: "sn.net.getQueryField",
                       defualt: "field [FIELD] in current URL"
                     }),
+                    blockType: BlockType.REPORTER,
                     arguments: {
                         FIELD: {
                             type: ArgumentType.STRING,
@@ -67,11 +67,11 @@ class Net {
                 },
               {
                     opcode: 'openUrl',
-                    blockType: BlockType.COMMAND,
                     text: formatMessage({
                         id: "sn.net.openURL",
                         defualt: "open [URL] URL",
                     }),
+                    blockType: BlockType.COMMAND,
                     arguments: {
                         URL: {
                             type: ArgumentType.STRING,
@@ -81,11 +81,11 @@ class Net {
                 },
               {
                     opcode: 'localStorageSetItem',
-                    blockType: BlockType.COMMAND,
                     text: formatMessage({
                         id: "sn.net.saveData",
                         defualt: "save [NAME] to [VALUE] to saveData"
                     }),
+                    blockType: BlockType.COMMAND,
                     arguments: {
                         NAME: {
                             type: ArgumentType.STRING,
@@ -99,11 +99,11 @@ class Net {
                 },
                 {
                     opcode: 'localStorageGetItem',
-                    blockType: BlockType.REPORTER,
                     text: formatMessage({
                         id: "sn.net.getData",
                         defualt: "return [NAME] from save data"
                     }),
+                    blockType: BlockType.REPORTER,
                     arguments: {
                         NAME: {
                             type: ArgumentType.STRING,
@@ -113,11 +113,11 @@ class Net {
                 },
                 {
                     opcode: 'localStorageRemoveItem',
-                    blockType: BlockType.COMMAND,
                     text: formatMessage({
                         id: "sn.net.purgeData",
                         defualt: "remove [NAME] from saveData"
                     }),
+                    blockType: BlockType.COMMAND,
                     arguments: {
                         NAME: {
                             type: ArgumentType.STRING,
