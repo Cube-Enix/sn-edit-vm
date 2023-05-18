@@ -228,8 +228,8 @@ class runt {
                                     blob.arrayBuffer().then(arrayBuffer => {
                                         const UINT8ARRAY_COSTUME_DATA = new Uint8Array(arrayBuffer, 0, arrayBuffer.byteLength);
                                         const CONTENT_TYPE = req.headers.get("Content-Type");
-                                        const IMAGE_CONTENT_TYPE = /*CONTENT_TYPE == "image/png" ? */"ImageBitmap";// : "ImageVector";
-                                        const FILE_EXTENSION = CONTENT_TYPE == "image/png" ? "png" : "jpg";
+                                        const IMAGE_CONTENT_TYPE = /*CONTENT_TYPE == "image/png" ? */"ImageVector";// : "ImageVector";
+                                        const FILE_EXTENSION = CONTENT_TYPE == "image/svg" ? "svg" : "jpg";
                                         const ASSET = vm.runtime.storage.createAsset(AssetType[IMAGE_CONTENT_TYPE], FILE_EXTENSION, UINT8ARRAY_COSTUME_DATA, null, true);
                                         const GENERATED_MD5 = ASSET.assetId;
                                         const ROTATION_CENTER = {
